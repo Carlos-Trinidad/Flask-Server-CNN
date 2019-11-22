@@ -1,1 +1,3 @@
 venv/Lib
+.vscode
+__pycache__
