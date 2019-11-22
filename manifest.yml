@@ -1,0 +1,6 @@
+---
+applications:
+- name: predict-famosos-carlostrinidad
+  memory: 128M
+  instances: 1
+  command: pip install keras==2.2.5 tensorflow==1.15.0 Pillow numpy flask && flask start
