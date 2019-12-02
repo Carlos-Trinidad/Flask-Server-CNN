@@ -2,5 +2,6 @@
 applications:
 - name: predict-famosos-carlostrinidad
   memory: 128MB
-  random-route: true
-  buildpack: python_buildpack
+  buildpacks: 
+    - https://github.com/cloudfoundry/python-buildpack.git
+  command: python app.py
