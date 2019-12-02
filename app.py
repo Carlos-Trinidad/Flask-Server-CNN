@@ -12,7 +12,7 @@ app = flask.Flask(__name__)
 model = None
 
 # set the port dynamically with a default of 5000 for local development
-port = int(os.getenv('PORT', '5000'))
+port = int(os.getenv('PORT', '8080'))
 
 def load_model_from_file():
     # load the  Keras model
