@@ -1,6 +1,7 @@
 ---
 applications:
 - name: predict-famosos-carlostrinidad
-  memory: 128M
-  instances: 1
-  command: pip install keras==2.2.5 tensorflow==1.15.0 Pillow numpy flask && flask start
+  memory: 128MB
+  random-route: true
+  buildpack: python_buildpack
+  command: pip install -t lib -r requirements.txt && python app.py
