@@ -10,6 +10,9 @@ import io
 app = flask.Flask(__name__)
 model = None
 
+# set the port dynamically with a default of 5000 for local development
+port = int(os.getenv('PORT', '5000'))
+
 def load_model_from_file():
     # load the  Keras model
     global model
@@ -77,4 +80,4 @@ if __name__ == "__main__":
     print(("* Loading Keras model and Flask starting server...",
         "please wait until server has fully started"))
     load_model_from_file()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=port)
